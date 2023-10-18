@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Character01 from "../images/character01.png";
+---
+
+<Layout title="Juan.dl/about">
+  <article id="about" class="pt-[28rem] pb-40">
+    <div>
+      <p>About</p>
+      <p class="text-5xl font-bold">Who is this guy</p>
+    </div>
+
+    <div id="container-01">
+      <div id="pic-container">
+        <Image src={Character01} alt="tooned version of me" class="image" />
+      </div>
+    </div>
+
+    <div class="max-w-lg">
+      <p>My name is <span class="text-accent font-bold">Juan De León</span></p>
+      <p class="mt-4 font-montserrat text-xl font-thin">
+        I’m a full-stack developer,
+      </p>
+      <p class="font-montserrat text-xl font-thin">
+        appacionated for code, always giving my best and trying to build nice
+        experiences.
+      </p>
+      <p class="mt-4 font-montserrat text-xl font-thin">
+        I have been professionally in the industry since 2021 when I got
+        graduated from college, but have worked on small projects a lot before
+        that.
+      </p>
+    </div>
+
+    <p class="text-2xl font-bold mt-16">What do I do</p>
+  </article>
+</Layout>
+
+<style>
+  #about {
+    font-family: PPMonumentExtended;
+    font-weight: normal;
+    color: white;
+  }
+  #container-01 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+  #pic-container {
+    border: solid 2px rgb(255, 255, 255);
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+  }
+  #pic-container .image {
+    width: 19rem;
+    height: 19rem;
+    transform: scaleX(-1);
+    position: absolute;
+    left: 2.5rem;
+    top: -2.5rem;
+  }
+</style>

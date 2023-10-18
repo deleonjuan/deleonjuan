@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Character01 from "../images/character01.png";
+---
+
+<Layout title="Juan.dl">
+  <article id="presentation">
+    <h1>Juan Here.</h1>
+
+    <div id="container-01">
+      <div id="pic-container">
+        <Image src={Character01} alt="tooned version of me" class="image" />
+      </div>
+
+      <div id="description-container">
+        <p class="subtitle">FULLSTACK DEV</p>
+        <p class="subtitle">JS MASTER</p>
+      </div>
+    </div>
+
+    <p id="quote-1">
+      <span class="c-red">I make solutions,</span> not software
+      <p>Optimal, usable and creative solutions.</p>
+    </p>
+
+    <div class="mt-12">
+      <p class="text-xl">&gt DON’T BE SHY</p>
+      <label class="mr-8"><a href="https://www.linkedin.com/in/juan-alberto-de-leon-384424173/">LinkedIn</a></label>
+      <label class="mr-8"><a href="https://github.com/deleonjuan">GitHub</a></label>
+      <label class="mr-8"><a href="mailto:juannillo95@gmail.com">Email</a></label>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  #presentation {
+    font-family: PPMonumentExtended;
+    font-weight: normal;
+    color: white;
+  }
+
+  #presentation #quote-1 {
+    margin-top: 3rem;
+  }
+
+  #presentation h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  #presentation .subtitle {
+    font-size: 1.2rem;
+  }
+
+  #presentation .c-red {
+    color: var(--accent);
+  }
+
+  #container-01 {
+    position: relative;
+  }
+
+  #pic-container {
+    border: solid 2px rgb(255, 255, 255);
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+  }
+
+  #pic-container .image {
+    width: 19rem;
+    height: 19rem;
+    transform: scaleX(-1);
+    position: absolute;
+    left: 2.5rem;
+    top: -2.5rem;
+  }
+
+  #description-container {
+    display: inline-block;
+    padding: 0.8rem;
+    background-color: black;
+    color: white;
+
+    position: absolute;
+    bottom: -1.5rem;
+    left: 10rem;
+  }
+</style>
