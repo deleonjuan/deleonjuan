@@ -1,7 +1,6 @@
 ---
 import Aside from "../components/Aside.astro";
 import Header from "../components/Header.astro";
-import Background from "./Background.astro";
 
 interface Props {
   title: string;
@@ -21,7 +20,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Background>
+    <div class="flex flex-1 justify-center overflow-auto">
       <main>
         <Header />
         <section>
@@ -29,7 +28,7 @@ const { title } = Astro.props;
         </section>
         <Aside />
       </main>
-    </Background>
+    </div>
   </body>
 </html>
 <style is:global>
@@ -77,6 +76,19 @@ const { title } = Astro.props;
     height: 100%;
   }
 
+  html > body > div:first-child {
+    scroll-behavior: smooth;
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  :root {
+    --maxWidth: 65rem;
+    --accent: #f22b2c;
+  }
+
   body {
     overflow: hidden;
 
@@ -91,7 +103,7 @@ const { title } = Astro.props;
     grid-area: main;
     section: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
   }
   aside {
     grid-area: sidebar;
@@ -103,14 +115,5 @@ const { title } = Astro.props;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100vh;
     grid-template-areas: "main main sidebar";
-  }
-
-  .text-accent {
-    color: var(--accent);
-  }
-
-  :root {
-    --maxWidth: 65rem;
-    --accent: #f22b2c;
   }
 </style>
