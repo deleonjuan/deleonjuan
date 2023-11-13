@@ -116,4 +116,14 @@ const { title } = Astro.props;
     grid-template-rows: 100vh;
     grid-template-areas: "main main sidebar";
   }
+
+  @media not all and (min-width: 768px) {
+    main {
+      grid-template-columns: 1rem auto 1rem;
+      grid-template-areas: ". main .";
+    }
+    section {
+      align-items: center;
+    }
+  }
 </style>

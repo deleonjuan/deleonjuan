@@ -1,17 +1,23 @@
 <header>
-    <a href="/" class="text-accent">JUAN DL</a>
+  <a href="/" class="text-accent">JUAN DL</a>
 </header>
 
 <style>
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: var(--maxWidth);
+    margin: auto;
+
+    font-family: PPMonumentExtended;
+    font-weight: bold;
+    padding: 1.5rem 0rem;
+  }
+
+  @media not all and (min-width: 768px) {
     header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: var(--maxWidth);
-        margin: auto;
-        
-		font-family: PPMonumentExtended;
-		font-weight: bold;
-        padding: 1.5rem 0.0rem;
-	}
+        padding: 1.5rem 1rem;
+    }
+  }
 </style>
