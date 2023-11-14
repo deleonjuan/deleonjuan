@@ -1,7 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import PlaceIveWorked from "../components/placeIveWorked.astro";
+
+import About from "../components/articles/about.astro";
+import Contact from "../components/articles/contact.astro";
+import Experience from "../components/articles/experience.astro";
+import Projects from "../components/articles/projects.astro";
 
 import Character01 from "../images/character01.png";
 ---
@@ -54,113 +58,14 @@ import Character01 from "../images/character01.png";
   </article>
 
    /** / A B O U T */
-  <article id="about" class="pt-[6rem] pb-[5rem]">
-    <div>
-      <p>About</p>
-      <p class="text-5xl font-bold">Who is this guy</p>
-    </div>
-
-    <div id="container-01" class="flex py-20 justify-center">
-      <div
-        id="pic-container"
-        class="relative w-[18rem] h-[18rem] border-2 border-solid border-white"
-      >
-        <Image
-          class="w-[19rem] h-[19rem] absolute left-[2.5rem] top-[-2.5rem] scale-x-[-1]"
-          src={Character01}
-          alt="tooned version of me"
-          class="image"
-        />
-      </div>
-    </div>
-
-    <div class="max-w-lg">
-      <p>My name is <span class="text-accent font-bold">Juan De León</span></p>
-      <p class="mt-4 font-montserrat text-xl">I’m a full-stack developer,</p>
-      <p class="font-montserrat text-xl">
-        appacionated for code, always giving my best and trying to build nice
-        experiences.
-      </p>
-      <p class="mt-4 font-montserrat text-xl">
-        I have been professionally in the industry since 2021 when I got
-        graduated from college, but have worked on small projects a lot before
-        that.
-      </p>
-    </div>
-
-    <p class="text-2xl font-bold mt-16">What do I do</p>
-  </article>
+  <About />
 
    /** / E X P E R I E N C E */
-  <article id="experience" class="pt-[10rem] pb-[10rem]">
-    <div class="mb-24">
-      <p>Where</p>
-      <p class="text-5xl font-bold">I've worked at</p>
-    </div>
-
-    <PlaceIveWorked
-      date="NOW"
-      placeName="Telus International - Digital Solutions"
-      description="SR. FULL-STACK"
-    />
-
-    <PlaceIveWorked
-      date="2021"
-      placeName="CIAN CODERS GT"
-      description="JR. FULL-STACK"
-    />
-  </article>
+  <Experience />
 
    /** / P R O J E C T S */
-  <article id="projects" class="pt-[10rem] pb-[12rem]">
-    <div class="mb-24">
-      <p>Projects</p>
-      <p class="text-5xl font-bold">I've worked on</p>
-    </div>
-
-    <p class="text-5xl font-bold text-accent">
-      OOPS!, nothing here at the moment
-    </p>
-  </article>
+  <Projects />
 
    /** / C O N T A C T */
-  <article id="contact" class="pt-[10rem] pb-[10rem]">
-    <div class="mb-14">
-      <p class="text-5xl font-bold">Get in touch</p>
-    </div>
-
-    <p class="mt-4 font-montserrat text-xl">
-      make sure to use the following messagge structure
-    </p>
-    <p class="font-montserrat text-xl mb-10">
-      if you want a 100% of chances of getting an answer.
-    </p>
-    <p class="font-montserrat text-xl">Hey Juan! - my name is...</p>
-    <p class="font-montserrat text-xl">I work for...</p>
-    <p class="font-montserrat text-xl">I saw your contact info on...</p>
-    <p class="font-montserrat text-xl">and I’m contacting you because ...</p>
-
-    <div class="mt-12">
-      <p class="text-xl text-accent">This is my email</p>
-      <label class="mr-8">juannillo95@gmail.com</label>
-
-      <p class="text-xl text-accent mt-8">My socials</p>
-      <label class="mr-8"
-        ><a href="https://www.linkedin.com/in/juan-alberto-de-leon-384424173/"
-          >LinkedIn</a
-        ></label
-      >
-      <label class="mr-8"
-        ><a href="https://github.com/deleonjuan">GitHub</a></label
-      >
-    </div>
-  </article>
+  <Contact />
 </Layout>
-
-<style>
-  article {
-    font-family: PPMonumentExtended;
-    font-weight: normal;
-    color: white;
-  }
-</style>

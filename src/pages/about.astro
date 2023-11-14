@@ -1,54 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import Character01 from "../images/character01.png";
+import Layout from "../layouts/SingleLayout.astro";
+import AboutComponent from "../components/articles/about.astro";
 ---
 
 <Layout title="Juan.dl/about">
-  <article id="about" class="pt-[28rem] pb-40">
-    <div>
-      <p>About</p>
-      <p class="text-5xl font-bold">Who is this guy</p>
-    </div>
-
-    <div id="container-01" class="flex py-20 justify-center">
-      <div
-        id="pic-container"
-        class="relative w-[18rem] h-[18rem] border-2 border-solid border-white"
-      >
-        <Image
-          class="w-[19rem] h-[19rem] absolute left-[2.5rem] top-[-2.5rem] scale-x-[-1]"
-          src={Character01}
-          alt="tooned version of me"
-          class="image"
-        />
-      </div>
-    </div>
-
-    <div class="max-w-lg">
-      <p>My name is <span class="text-accent font-bold">Juan De León</span></p>
-      <p class="mt-4 font-montserrat text-xl font-thin">
-        I’m a full-stack developer,
-      </p>
-      <p class="font-montserrat text-xl font-thin">
-        appacionated for code, always giving my best and trying to build nice
-        experiences.
-      </p>
-      <p class="mt-4 font-montserrat text-xl font-thin">
-        I have been professionally in the industry since 2021 when I got
-        graduated from college, but have worked on small projects a lot before
-        that.
-      </p>
-    </div>
-
-    <p class="text-2xl font-bold mt-16">What do I do</p>
-  </article>
+  <AboutComponent />
 </Layout>
-
-<style>
-  #about {
-    font-family: PPMonumentExtended;
-    font-weight: normal;
-    color: white;
-  }
-</style>

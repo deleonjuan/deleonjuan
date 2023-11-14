@@ -1,22 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/SingleLayout.astro";
+import ProjectsComponent from "../components/articles/projects.astro";
 ---
 
 <Layout title="Juan.dl/projects">
-  <article id="projects" class="pb-24">
-    <div class="mb-24">
-      <p>Projects</p>
-      <p class="text-5xl font-bold">I've worked on</p>
-    </div>
-
-    <p class="text-5xl font-bold text-accent">OOPS!, nothing here 4 now</p>
-  </article>
+  <ProjectsComponent />
 </Layout>
-
-<style>
-  #projects {
-    font-family: PPMonumentExtended;
-    font-weight: normal;
-    color: white;
-  }
-</style>

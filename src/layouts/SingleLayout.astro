@@ -1,5 +1,4 @@
 ---
-import Aside from "../components/Aside.astro";
 import Header from "../components/Header.astro";
 
 interface Props {
@@ -26,7 +25,6 @@ const { title } = Astro.props;
         <section>
           <slot />
         </section>
-        <Aside />
       </main>
     </div>
   </body>
@@ -102,17 +100,15 @@ const { title } = Astro.props;
     font-weight: normal;
     color: white;
   }
-  aside {
-    grid-area: sidebar;
-  }
   main {
     width: 100%;
     max-width: var(--maxWidth);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100vh;
-    grid-template-areas: "main main sidebar";
+    grid-template-areas: "main main main";
   }
+
   @media not all and (min-width: 768px) {
     main {
       grid-template-columns: 1rem auto 1rem;
@@ -120,32 +116,6 @@ const { title } = Astro.props;
     }
     section {
       align-items: center;
-    }
-  }
-  /** TEMP TEXT WHEN CLICK ON ASIDE ITEMS */
-  .temp-text {
-    position: absolute;
-    color: white;
-    font-size: 1.2rem;
-    opacity: 1;
-    z-index: 1000;
-    user-select: none;
-    font-family: PPMonumentExtended;
-  }
-  .fade-out {
-    animation: fadeOut 1.5s forwards;
-  }
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    20% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-40px);
     }
   }
 </style>
