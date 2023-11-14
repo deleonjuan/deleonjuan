@@ -1,5 +1,5 @@
-<aside>
-  <nav>
+<aside id="aside-nav" class="flex items-center">
+  <nav class="fixed">
     <ul>
       <li>
         <a href="#about">ABOUT ME</a>
@@ -17,14 +17,34 @@
   </nav>
 </aside>
 
+<script>
+  const navItems = document
+    .getElementById("aside-nav")
+    .getElementsByTagName("a");
+  const page = document.getElementById("page-container");
+
+  for (let i = 0; i < navItems.length; i++) {
+    const element = navItems[i];
+    element.addEventListener("click", (event) => {
+      const text = document.createElement("div");
+
+      text.className = "temp-text";
+      text.innerText = "tap";
+      text.style.top = event.clientY - 30 + "px";
+      text.style.left = event.clientX - 20 + "px";
+
+      page.appendChild(text);
+
+      text.classList.add("fade-out");
+
+      setTimeout(() => {
+        text.remove();
+      }, 1500);
+    });
+  }
+</script>
+
 <style>
-  aside {
-    display: flex;
-    align-items: center;
-  }
-  nav{
-    position: fixed;
-  }
   li {
     margin: 2rem 0;
     padding: 0.5rem 0.5rem;
