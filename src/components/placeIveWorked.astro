@@ -2,10 +2,10 @@
 interface Props {
     date: string,
     placeName: string,
-    description: string
+    position: string
 }
 
-const { date, placeName, description } = Astro.props;
+const { date, placeName, position } = Astro.props;
 ---
 
 <div class="flex dir-col items-center py-7">
@@ -13,7 +13,7 @@ const { date, placeName, description } = Astro.props;
         <p class="text-2xl text-accent">{date}</p>
     </div>
     <div>
-        <p class="text-2xl">{description}</p>
+        <p class="text-2xl">{position}</p>
         <p class="font-thin">{placeName}</p>
     </div>
 </div>

@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 
 import Character01 from "../../images/character01.png";
+
+import { basics, skills } from "@cv";
 ---
 
 <article id="about" class="pt-[6rem] pb-[5rem]">
@@ -26,16 +28,39 @@ import Character01 from "../../images/character01.png";
 
   <div class="max-w-lg">
     <p>My name is <span class="text-accent font-bold">Juan De León</span></p>
-    <p class="mt-4 font-montserrat text-xl">I’m a full-stack developer,</p>
-    <p class="font-montserrat text-xl">
-      appacionated for code, always giving my best and trying to build nice
-      experiences.
-    </p>
-    <p class="mt-4 font-montserrat text-xl">
-      I have been professionally in the industry since 2021 when I got graduated
-      from college, but have worked on small projects a lot before that.
-    </p>
+    {
+      basics.summary.map((item, key) => (
+        <p class={`${key !== 1 && "mt-4"} font-montserrat text-xl`}>{item}</p>
+      ))
+    }
   </div>
 
-  <p class="text-2xl font-bold mt-16">What do I do</p>
+  <p class="text-2xl font-bold mt-16 mb-10">What do I do</p>
+  <ul>
+    {
+      skills.map(({ name }) => (
+        <li>
+          <span class="font-montserrat">{name}</span>
+        </li>
+      ))
+    }
+  </ul>
 </article>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    background: black;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border: solid 1px #555;
+    font-size: 1rem;
+  }
+</style>

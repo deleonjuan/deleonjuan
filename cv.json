@@ -1,0 +1,132 @@
+{
+    "basics": {
+        "name": "Juan Alberto De Leon",
+        "shortName": "Juan De Leon",
+        "label": "+5 years of experience as Full Stack developer",
+        "image": "/me.webp",
+        "email": "juan.deleon.dev@gmail.com",
+        "url": "",
+        "summary": [
+            "I’m a full-stack developer,",
+            "appacionated for code, always giving my best and trying to build nice experiences.",
+            "I have been professionally in the industry since 2021 when I got graduated from college, but have worked on small projects a lot before that."
+        ],
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "Quetzaltenango",
+            "countryCode": "ES",
+            "region": "Guatemala"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "juan-dl",
+                "url": "https://www.linkedin.com/in/juan-dl/"
+            },
+            {
+                "network": "GitHub",
+                "username": "deleonjuan",
+                "url": "https://github.com/deleonjuan/deleonjuan"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "name": "HTML/CSS/JavaScript",
+            "level": "Master",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "web development",
+                "web pages"
+            ]
+        },
+        {
+            "name": "TypeScript",
+            "level": "Advanced",
+            "keywords": [
+                "Desarrollo Web",
+                "Web Development",
+                "Frontend",
+                "Backend",
+                "JavaScript Superset"
+            ]
+        },
+        {
+            "name": "Node",
+            "level": "Advanced",
+            "keywords": [
+                "Desarrollo Web",
+                "Backend",
+                "JavaScript",
+                "Servidor",
+                "Web Development",
+                "Servers"
+            ]
+        },
+        {
+            "name": "React",
+            "level": "Advanced",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "JavaScript Library",
+                "UI"
+            ]
+        },
+        {
+            "name": "React Native",
+            "level": "Advanced",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "JavaScript Library",
+                "UI"
+            ]
+        },
+        {
+            "name": "Git / GitHub",
+            "level": "Advanced",
+            "keywords": [
+                "Control de Versiones",
+                "Colaboración",
+                "Código Fuente"
+            ]
+        }
+    ],
+    "work": [
+        {
+            "name": "Telus International - Digital Solutions",
+            "position": "SR. FULL-STACK",
+            "url": "",
+            "startDate": "2021-01-01",
+            "endDate": "NOW",
+            "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada.",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "name": "CIAN CODERS GT",
+            "position": "JR. FULL-STACK",
+            "url": "",
+            "startDate": "2016-06-01",
+            "endDate": "2021",
+            "summary": "Helped to develop different web systems and mobile applications for different clients around my country",
+            "highlights": [
+                "Started the company"
+            ]
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certificate",
+            "date": "2021-11-07",
+            "issuer": "Company",
+            "url": "https://certificate.com"
+        }
+    ],
+    "projects": [
+    ]
+}

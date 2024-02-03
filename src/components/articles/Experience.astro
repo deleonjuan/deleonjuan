@@ -1,5 +1,7 @@
 ---
 import PlaceIveWorked from "../placeIveWorked.astro";
+
+import { work } from "@cv";
 ---
 
 <article id="experience" class="pt-[10rem] pb-[10rem]">
@@ -8,15 +10,13 @@ import PlaceIveWorked from "../placeIveWorked.astro";
     <p class="text-5xl font-bold">I've worked at</p>
   </div>
 
-  <PlaceIveWorked
-    date="NOW"
-    placeName="Telus International - Digital Solutions"
-    description="SR. FULL-STACK"
-  />
-
-  <PlaceIveWorked
-    date="2021"
-    placeName="CIAN CODERS GT"
-    description="JR. FULL-STACK"
-  />
+  {
+    work.map((job) => (
+      <PlaceIveWorked
+        date={job.endDate}
+        placeName={job.name}
+        position={job.position}
+      />
+    ))
+  }
 </article>
