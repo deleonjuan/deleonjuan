@@ -9,7 +9,7 @@ import Projects from "../components/articles/Projects.astro";
 
 import Character01 from "../images/character01.png";
 
-import {basics} from '@cv';
+import { basics } from "@cv";
 ---
 
 <Layout title="Juan.dl">
@@ -31,7 +31,7 @@ import {basics} from '@cv';
 
       <div
         id="description-container"
-        class="inline-block p-[0.8rem] bg-black text-white absolute bottom-[-1.5rem] left-[10rem]"
+        class="inline-block p-[0.8rem] bg-black text-white absolute bottom-[-3rem] left-[10rem]"
       >
         <p class="text-xl">FULLSTACK DEV</p>
         <p class="text-xl">+5 YEARS OF EXPERIENCE</p>
@@ -39,36 +39,21 @@ import {basics} from '@cv';
       </div>
     </div>
 
-    <p id="quote-1" class="mt-12">
-      <span class="text-accent">I make solutions,</span> not software
+    <p id="quote-1" class="mt-24">
+      <span class="text-accent">I make solutions,</span> not just software
       <p>Optimal, usable and creative solutions.</p>
     </p>
-
-    <div class="mt-12">
-      <p class="text-xl">&gt DON’T BE SHY</p>
-      <label class="mr-8"
-        ><a href="https://www.linkedin.com/in/juan-alberto-de-leon-384424173/"
-          >LinkedIn</a
-        ></label
-      >
-      <label class="mr-8"
-        ><a href="https://github.com/deleonjuan">GitHub</a></label
-      >
-      <label class="mr-8"
-        ><a href="mailto:juannillo95@gmail.com">Email</a></label
-      >
-    </div>
   </article>
 
-   /** / A B O U T */
+  /** / A B O U T */
   <About />
 
-   /** / E X P E R I E N C E */
+  /** / E X P E R I E N C E */
   <Experience />
 
-   /** / P R O J E C T S */
+  /** / P R O J E C T S */
   <Projects />
 
-   /** / C O N T A C T */
-  <Contact />
+  /** / C O N T A C T */
+  <!-- <Contact /> -->
 </Layout>

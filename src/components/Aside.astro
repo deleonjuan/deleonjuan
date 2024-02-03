@@ -1,5 +1,12 @@
+---
+import CopyIcon from "../icons/copy-document.astro";
+import ExternalLink from "../icons/external-link.astro";
+
+import { basics } from "@cv";
+---
+
 <aside id="aside-nav" class="flex items-center">
-  <nav class="fixed">
+  <nav id="aside-list" class="fixed">
     <ul>
       <li>
         <a href="#about">ABOUT ME</a>
@@ -10,16 +17,39 @@
       <li>
         <a href="#projects">PROJECTS</a>
       </li>
-      <li>
-        <a href="#contact">CONTACT</a>
-      </li>
     </ul>
+    <div class="mt-12 baseText ml-2">
+      <p class="text-xl mb-3 text-accent font-bold">&gt DON’T BE SHY</p>
+      <p class="mb-3">
+        <span id="emailLink" class="inline-flex cursor-pointer">
+          {basics.email}
+          <CopyIcon />
+        </span>
+      </p>
+      <label class="mr-8">
+        <a class="inline-flex" href={basics.profiles[0].url} target="_blank">
+          {basics.profiles[0].network}
+          <ExternalLink />
+        </a>
+      </label>
+      <label class="mr-8">
+        <a class="inline-flex" href={basics.profiles[1].url} target="_blank">
+          {basics.profiles[1].network}
+          <ExternalLink />
+        </a>
+      </label>
+    </div>
   </nav>
 </aside>
 
 <script>
+  import { basics } from "@cv";
+
+  /**
+   * creates a "Tab" label for every click on an <a> elemetn
+   */
   const navItems = document
-    .getElementById("aside-nav")
+    .getElementById("aside-list")
     .getElementsByTagName("a");
   const page = document.getElementById("page-container");
 
@@ -42,6 +72,14 @@
       }, 1500);
     });
   }
+
+  /**
+   * copy the email to the clipboard
+   */
+  const copyText = document.getElementById("emailLink");
+  copyText.addEventListener("click", (e) => {
+    navigator.clipboard.writeText(basics.email);
+  });
 </script>
 
 <style>
@@ -49,10 +87,15 @@
     margin: 2rem 0;
     padding: 0.5rem 0.5rem;
   }
-  a {
+  li a {
     color: white;
     font-family: PPMonumentExtended;
     font-weight: bold;
     font-size: xx-large;
+  }
+  .baseText {
+    font-family: PPMonumentExtended;
+    font-weight: lighter;
+    color: white;
   }
 </style>
