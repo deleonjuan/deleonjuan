@@ -1,19 +1,25 @@
 ---
+import ExternalLink from "../icons/external-link.astro";
+
 interface Props {
-    date: string,
-    placeName: string,
-    position: string
+  date: string;
+  placeName: string;
+  position: string;
+  url?: string;
 }
 
-const { date, placeName, position } = Astro.props;
+const { date, placeName, position, url } = Astro.props;
 ---
 
 <div class="flex dir-col items-center py-7">
-    <div class="mr-10">
-        <p class="text-2xl text-accent">{date}</p>
-    </div>
-    <div>
-        <p class="text-2xl">{position}</p>
-        <p class="font-ppNeueMontreal">{placeName.toUpperCase()}</p>
-    </div>
+  <div class="mr-10">
+    <p class="text-2xl text-accent">{date}</p>
+  </div>
+  <div>
+    <p class="text-2xl">{position}</p>
+    <a class="font-ppNeueMontreal inline-flex cursor-pointer externalLink" href={url} target="_blank">
+      {placeName.toUpperCase()}
+      <ExternalLink />
+    </a>
+  </div>
 </div>

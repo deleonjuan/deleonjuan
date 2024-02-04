@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import Character01 from "../../images/character01.png";
+import ProfilePic from "../../images/profilePic.webp";
 
 import { basics, skills } from "@cv";
 ---
@@ -15,13 +15,12 @@ import { basics, skills } from "@cv";
   <div id="container-01" class="flex py-20 justify-center">
     <div
       id="pic-container"
-      class="relative w-[18rem] h-[18rem] border-2 border-solid border-white"
+      class="relative w-[18rem] h-[23rem] border-2 border-solid border-white"
     >
       <Image
-        class="w-[19rem] h-[19rem] absolute left-[2.5rem] top-[-2.5rem] scale-x-[-1]"
-        src={Character01}
+        class="w-[18rem] absolute left-[2.5rem] top-[-2.5rem]"
+        src={ProfilePic}
         alt="tooned version of me"
-        class="image"
       />
     </div>
   </div>

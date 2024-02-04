@@ -21,19 +21,19 @@ import { basics } from "@cv";
     <div class="mt-12 baseText ml-2">
       <p class="text-xl mb-3 text-accent font-bold">&gt DON’T BE SHY</p>
       <p class="mb-3">
-        <span id="emailLink" class="inline-flex cursor-pointer">
+        <span id="emailLink" class="inline-flex cursor-pointer externalLink">
           {basics.email}
           <CopyIcon />
         </span>
       </p>
       <label class="mr-8">
-        <a class="inline-flex" href={basics.profiles[0].url} target="_blank">
+        <a class="inline-flex externalLink" href={basics.profiles[0].url} target="_blank">
           {basics.profiles[0].network}
           <ExternalLink />
         </a>
       </label>
       <label class="mr-8">
-        <a class="inline-flex" href={basics.profiles[1].url} target="_blank">
+        <a class="inline-flex externalLink" href={basics.profiles[1].url} target="_blank">
           {basics.profiles[1].network}
           <ExternalLink />
         </a>
@@ -92,6 +92,10 @@ import { basics } from "@cv";
     font-family: PPMonumentExtended;
     font-weight: bold;
     font-size: xx-large;
+  }
+
+  li a:hover {
+    color: var(--accent);
   }
   .baseText {
     font-family: PPMonumentExtended;

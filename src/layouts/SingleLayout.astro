@@ -89,7 +89,7 @@ const { title } = Astro.props;
   body {
     overflow: hidden;
 
-    background-image: url("../images/bg01.png");
+    background-image: url("../images/bg01.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -104,6 +104,12 @@ const { title } = Astro.props;
   article {
     font-family: PPMonumentExtended;
     font-weight: normal;
+    color: white;
+  }
+  .externalLink svg {
+    color: transparent;
+  }
+  .externalLink:hover svg {
     color: white;
   }
   main {

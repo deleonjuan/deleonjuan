@@ -27,7 +27,7 @@
             {
                 "network": "GitHub",
                 "username": "deleonjuan",
-                "url": "https://github.com/deleonjuan/deleonjuan"
+                "url": "https://github.com/deleonjuan/"
             }
         ]
     },
@@ -98,8 +98,8 @@
     "work": [
         {
             "name": "Telus International",
-            "position": "SR. FULL-STACK",
-            "url": "",
+            "position": "MID. FULL-STACK",
+            "url": "https://www.telusinternational.com/",
             "startDate": "",
             "endDate": "NOW",
             "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada.",
@@ -110,7 +110,7 @@
         {
             "name": "CIAN CODERS GT",
             "position": "JR. FULL-STACK",
-            "url": "",
+            "url": "https://ciancoders.com/es/",
             "startDate": "",
             "endDate": "2021",
             "summary": "Helped to develop different web systems and mobile applications for different clients around my country",
