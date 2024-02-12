@@ -1,0 +1,66 @@
+---
+import LinkIcon from "../icons/link.astro";
+import Github from "../icons/github.astro";
+
+interface Props {
+  name: string;
+  description: string;
+  technologies: string[];
+  github: string;
+  preview: string;
+}
+
+const { name, description, technologies, github, preview } = Astro.props;
+---
+
+<div class="flex dir-col items-center py-7 mr-10">
+  <div>
+    <p class="text-2xl text-accent">{name.toUpperCase()}</p>
+    <ul>
+      {
+        technologies.map((tech) => (
+          <li>
+            <span class="font-ppNeueMontreal">{tech}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="text-lg font-montserrat">{description}</p>
+
+    <div class="mt-5">
+      <label class="mr-5">
+        <a id="codeLink" class="inline-flex cursor-pointer externalLink" href={github} target="_blank">
+          code
+          <Github />
+        </a>
+      </label>
+
+      <label class="mr-5">
+        <a id="previewLink" class="inline-flex cursor-pointer externalLink" href={preview} target="_blank">
+          preview
+          <LinkIcon />
+        </a>
+      </label>
+    </div>
+  </div>
+</div>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    background: black;
+    border-radius: 100px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0;
+    border: solid 1px #555;
+    font-size: 0.9rem;
+  }
+</style>

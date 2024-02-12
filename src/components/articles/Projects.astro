@@ -1,10 +1,23 @@
+---
+import { projects } from "@cv";
+import ProjectsIveDone from "../projectsIveDone.astro";
+---
+
 <article id="projects" class="pt-[10rem] pb-[12rem]">
   <div class="mb-24">
     <p>Projects</p>
     <p class="text-5xl font-bold">I've worked on</p>
   </div>
 
-  <p class="text-5xl font-bold text-accent">
-    OOPS!, nothing here at the moment
-  </p>
+  {
+    projects.map((project) => (
+      <ProjectsIveDone
+        name={project.name}
+        description={project.description}
+        technologies={project.technologies}
+        github={project.github}
+        preview={project.preview}
+      />
+    ))
+  }
 </article>
