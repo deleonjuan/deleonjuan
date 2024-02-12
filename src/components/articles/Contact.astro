@@ -1,11 +1,13 @@
-<article id="contact" class="pt-[10rem] pb-[10rem]">
+---
+import { basics } from "@cv";
+---
+
+<article id="contact" class="pt-[10rem] pb-[10rem] mobile">
   <div class="mb-14">
     <p class="text-5xl font-bold">Get in touch</p>
   </div>
 
-  <p class="mt-4 font-montserrat text-xl">
-    follow this messagge structure
-  </p>
+  <p class="mt-4 font-montserrat text-xl">follow this messagge structure</p>
   <p class="font-montserrat text-xl mb-10">
     if you want a 100% of chances of getting an answer.
   </p>
@@ -16,16 +18,28 @@
 
   <div class="mt-12">
     <p class="text-xl text-accent">This is my email</p>
-    <label class="mr-8">juannillo95@gmail.com</label>
+    <label class="mr-8">{basics.email}</label>
 
     <p class="text-xl text-accent mt-8">My socials</p>
-    <label class="mr-8"
-      ><a href="https://www.linkedin.com/in/juan-alberto-de-leon-384424173/"
-        >LinkedIn</a
-      ></label
-    >
-    <label class="mr-8"
-      ><a href="https://github.com/deleonjuan">GitHub</a></label
-    >
+    {
+      basics.profiles.map(({ url, network: name }) => (
+        <label class="mr-8">
+          <a href={url} target="_blank">
+            {name}
+          </a>
+        </label>
+      ))
+    }
   </div>
 </article>
+
+<style>
+  .mobile {
+    display: none;
+  }
+  @media not all and (min-width: 768px) {
+    .mobile {
+      display: initial;
+    }
+  }
+</style>

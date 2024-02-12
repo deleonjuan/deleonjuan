@@ -26,18 +26,17 @@ import { basics } from "@cv";
           <CopyIcon />
         </span>
       </p>
-      <label class="mr-8">
-        <a class="inline-flex externalLink" href={basics.profiles[0].url} target="_blank">
-          {basics.profiles[0].network}
-          <ExternalLink />
-        </a>
-      </label>
-      <label class="mr-8">
-        <a class="inline-flex externalLink" href={basics.profiles[1].url} target="_blank">
-          {basics.profiles[1].network}
-          <ExternalLink />
-        </a>
-      </label>
+
+      {
+        basics.profiles.map(({ url, network: name }) => (
+          <label class="mr-8">
+            <a class="inline-flex externalLink" href={url} target="_blank">
+              {name}
+              <ExternalLink />
+            </a>
+          </label>
+        ))
+      }
     </div>
   </nav>
 </aside>

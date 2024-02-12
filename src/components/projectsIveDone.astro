@@ -28,17 +28,27 @@ const { name, description, technologies, github, preview } = Astro.props;
     <p class="text-lg font-montserrat">{description}</p>
 
     <div class="mt-5">
-      <label class="mr-5">
-        <a id="codeLink" class="inline-flex cursor-pointer externalLink" href={github} target="_blank">
-          code
+      <label class="mr-6">
+        <a
+          id="codeLink"
+          class="inline-flex cursor-pointer"
+          href={github}
+          target="_blank"
+        >
           <Github />
+          <span class="ml-2">code</span>
         </a>
       </label>
 
-      <label class="mr-5">
-        <a id="previewLink" class="inline-flex cursor-pointer externalLink" href={preview} target="_blank">
-          preview
-          <LinkIcon />
+      <label class="mr-6">
+        <a
+          id="previewLink"
+          class="inline-flex cursor-pointer"
+          href={preview}
+          target="_blank"
+        >
+          <LinkIcon/>
+          <span class="ml-1">preview</span>
         </a>
       </label>
     </div>

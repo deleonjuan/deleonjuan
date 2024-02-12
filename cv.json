@@ -126,17 +126,19 @@
     ],
     "certificates": [
         {
-            "name": "Certificate",
-            "date": "2021-11-07",
-            "issuer": "Company",
-            "url": "https://certificate.com"
+            "name": "Certified React Developer",
+            "date": "August 28, 2023",
+            "issuer": "W3Schools",
+            "url": "https://verify.w3schools.com/1O0RHZIJJP"
         }
     ],
     "projects": [
         {
             "name": "Slapper - Mobile app",
             "description": "recreation of the 10's TV show 'victorious' social media app *theSlap* that allows you to share your thoughts and mood as in the show.",
-            "technologies": ["React-Native"],
+            "technologies": [
+                "React-Native"
+            ],
             "github": "https://github.com/deleonjuan/slappr",
             "preview": "https://play.google.com/apps/testing/com.slappr"
         }
