@@ -3,7 +3,7 @@ import { projects } from "@cv";
 import ProjectsIveDone from "../projectsIveDone.astro";
 ---
 
-<article id="projects" class="pt-[10rem] pb-[12rem]">
+<article id="projects" class="min-h-screen flex flex-col justify-center">
   <div class="mb-24">
     <p>Projects</p>
     <p class="text-5xl font-bold">I've worked on</p>
@@ -15,8 +15,7 @@ import ProjectsIveDone from "../projectsIveDone.astro";
         name={project.name}
         description={project.description}
         technologies={project.technologies}
-        github={project.github}
-        preview={project.preview}
+        links={project.links}
       />
     ))
   }

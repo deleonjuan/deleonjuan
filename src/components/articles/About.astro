@@ -6,7 +6,7 @@ import ProfilePic from "../../images/profilePic.webp";
 import { basics, skills } from "@cv";
 ---
 
-<article id="about" class="pt-[6rem] pb-[5rem]">
+<article id="about" class="pt-[4rem] flex flex-col justify-center">
   <div>
     <p>About</p>
     <p class="text-5xl font-bold">Who is this guy</p>
@@ -29,7 +29,7 @@ import { basics, skills } from "@cv";
     <p>My name is <span class="text-accent font-bold">Juan De León</span></p>
     {
       basics.summary.map((item, key) => (
-        <p class={`${key !== 1 && "mt-4"} font-montserrat text-xl`}>{item}</p>
+        <p class={`${key !== 1 && "mt-4"} font-montserrat`}>{item}</p>
       ))
     }
   </div>
@@ -39,7 +39,7 @@ import { basics, skills } from "@cv";
     {
       skills.map(({ name }) => (
         <li>
-          <span class="font-ppNeueMontreal">{name}</span>
+          <span class="font-ppNeueMontreal text-sm">{name}</span>
         </li>
       ))
     }

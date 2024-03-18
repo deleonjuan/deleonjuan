@@ -1,6 +1,5 @@
 ---
-import CopyIcon from "../icons/copy-document.astro";
-import ExternalLink from "../icons/external-link.astro";
+import Iconify from './Iconify.astro'
 
 import { basics } from "@cv";
 ---
@@ -22,8 +21,7 @@ import { basics } from "@cv";
       <p class="text-xl mb-3 text-accent font-bold">&gt DON’T BE SHY</p>
       <p class="mb-3">
         <span id="emailLink" class="inline-flex cursor-pointer externalLink">
-          {basics.email}
-          <CopyIcon />
+          <Iconify label={basics.email} icon="copy"/>
         </span>
       </p>
 
@@ -31,8 +29,7 @@ import { basics } from "@cv";
         basics.profiles.map(({ url, network: name }) => (
           <label class="mr-8">
             <a class="inline-flex externalLink" href={url} target="_blank">
-              {name}
-              <ExternalLink />
+              <Iconify label={name}/>
             </a>
           </label>
         ))

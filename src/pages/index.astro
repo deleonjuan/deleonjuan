@@ -1,49 +1,16 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
 import About from "../components/articles/About.astro";
 import Contact from "../components/articles/Contact.astro";
 import Experience from "../components/articles/Experience.astro";
 import Projects from "../components/articles/Projects.astro";
-
-import Character01 from "../images/character01.png";
-
-import { basics } from "@cv";
+import Hero from "../components/articles/Hero.astro";
 ---
 
 <Layout title="Juan.dl">
   /** / H E R O */
-  <article id="presentation" class="pt-[8rem] min-h-screen">
-    <h1 class="text-6xl font-bold mb-5">{basics.shortName}</h1>
-
-    <div id="container-01" class="relative">
-      <div
-        id="pic-container"
-        class="relative w-[18rem] h-[18rem] border-2 border-solid border-white"
-      >
-        <Image
-          class="w-[19rem] h-[19rem] absolute left-[2.5rem] top-[-2.5rem] scale-x-[-1]"
-          src={Character01}
-          alt="tooned version of me"
-        />
-      </div>
-
-      <div
-        id="description-container"
-        class="inline-block p-[0.8rem] bg-black text-white absolute bottom-[-3rem] left-[10rem] font-ppNeueMontreal"
-      >
-        <p class="text-xl">FULLSTACK DEV</p>
-        <p class="text-xl">+5 YEARS OF EXPERIENCE</p>
-        <p class="text-xl">ES - EN</p>
-      </div>
-    </div>
-
-    <p id="quote-1" class="mt-24">
-      <span class="text-accent">I make solutions,</span> not just software.
-      <p>Optimal, usable and creative solutions.</p>
-    </p>
-  </article>
+  <Hero />
 
   /** / A B O U T */
   <About />

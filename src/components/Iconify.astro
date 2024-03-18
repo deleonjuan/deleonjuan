@@ -1,0 +1,17 @@
+---
+import CopyIcon from "../icons/copy-document.astro";
+import ExternalLink from "../icons/external-link.astro";
+
+interface Props {
+  label: string;
+  icon?: "externalLink" | "copy";
+  iconSize?: number;
+}
+const { label, icon = "externalLink", iconSize = 24 } = Astro.props;
+---
+
+<>
+  <span class="mr-1">{label}</span>
+  {icon === "externalLink" && <ExternalLink size={iconSize}/>}
+  {icon === "copy" && <CopyIcon size={iconSize}/>}
+</>

@@ -1,76 +1,80 @@
 ---
 import LinkIcon from "../icons/link.astro";
 import Github from "../icons/github.astro";
+import Iconify from "./Iconify.astro";
 
 interface Props {
   name: string;
   description: string;
   technologies: string[];
-  github: string;
-  preview: string;
+  links: any[];
 }
 
-const { name, description, technologies, github, preview } = Astro.props;
+const { name, description, technologies, links } = Astro.props;
 ---
-
-<div class="flex dir-col items-center py-7 mr-10">
+<!-- <LinkIcon size={16} />
+                <span class="ml-2 text-sm">{name}</span> -->
+<div id="project" class="flex dir-col items-center py-7 mr-10">
   <div>
-    <p class="text-2xl text-accent">{name.toUpperCase()}</p>
+    <!-- NAME -->
+    <p class="text-lg text-accent">{name.toUpperCase()}</p>
+    <!-- DESCRIPTION -->
+    <p class="text-base font-montserrat">{description}</p>
+
+    <!-- LINKS -->
+    <div class="my-3">
+      <ul id="project-links">
+        {
+          links.map(({ name, link }) => (
+            <label class="mr-6">
+              <a
+                id={`${name}-link`}
+                class="inline-flex cursor-pointer"
+                href={link}
+                target="_blank"
+              >
+                <Iconify label={name} iconSize={20}/>
+              </a>
+            </label>
+          ))
+        }
+      </ul>
+    </div>
+    <!-- TAGS -->
     <ul>
       {
         technologies.map((tech) => (
           <li>
-            <span class="font-ppNeueMontreal">{tech}</span>
+            <span class="font-ppNeueMontreal text-sm">{tech}</span>
           </li>
         ))
       }
     </ul>
-    <p class="text-lg font-montserrat">{description}</p>
-
-    <div class="mt-5">
-      <label class="mr-6">
-        <a
-          id="codeLink"
-          class="inline-flex cursor-pointer"
-          href={github}
-          target="_blank"
-        >
-          <Github />
-          <span class="ml-2">code</span>
-        </a>
-      </label>
-
-      <label class="mr-6">
-        <a
-          id="previewLink"
-          class="inline-flex cursor-pointer"
-          href={preview}
-          target="_blank"
-        >
-          <LinkIcon/>
-          <span class="ml-1">preview</span>
-        </a>
-      </label>
-    </div>
   </div>
 </div>
 
 <style>
-  ul {
+  #project ul {
     display: inline-flex;
     gap: 8px;
     flex-wrap: wrap;
   }
 
-  li {
+  #project li {
     background: black;
     border-radius: 100px;
     color: white;
     font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.5rem 2rem;
+    font-weight: lighter;
+    padding: 0.2rem 1rem;
     margin: 0.5rem 0;
     border: solid 1px #555;
     font-size: 0.9rem;
   }
+
+  #project-links {
+    font-weight: normal;
+    font-size: small;
+  }
+  
 </style>

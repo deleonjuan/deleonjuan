@@ -1,7 +1,7 @@
 {
     "basics": {
-        "name": "Juan Alberto De Leon",
-        "shortName": "Juan De Leon",
+        "name": "Juan Alberto De León",
+        "shortName": "Juan De León",
         "label": "+5 years of experience as Full Stack developer",
         "image": "/me.webp",
         "email": "juan.deleon.dev@gmail.com",
@@ -139,8 +139,16 @@
             "technologies": [
                 "React-Native"
             ],
-            "github": "https://github.com/deleonjuan/slappr",
-            "preview": "https://play.google.com/apps/testing/com.slappr"
+            "links": [
+                {
+                    "name": "code",
+                    "link:": "https://github.com/deleonjuan/slappr"
+                },
+                {
+                    "name": "preview",
+                    "link:": "https://play.google.com/apps/testing/com.slappr"
+                }
+            ]
         }
     ]
 }

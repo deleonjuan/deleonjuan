@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import Character01 from "../../images/character01.png";
+import { basics } from "@cv";
+---
+
+<article id="presentation" class="min-h-screen flex flex-col justify-center">
+    <h1 class="text-6xl font-bold mb-5">{basics.shortName}</h1>
+
+    <div id="container-01" class="relative">
+      <div
+        id="pic-container"
+        class="relative w-[18rem] h-[18rem] border-2 border-solid border-white"
+      >
+        <Image
+          class="w-[19rem] h-[19rem] absolute left-[2.5rem] top-[-2.5rem] scale-x-[-1]"
+          src={Character01}
+          alt="tooned version of me"
+        />
+      </div>
+
+      <div
+        id="description-container"
+        class="inline-block p-[0.8rem] bg-black text-white absolute bottom-[-2rem] left-[10rem] font-ppNeueMontreal"
+      >
+        <p>FULLSTACK DEV</p>
+        <p>+5 YEARS OF EXPERIENCE</p>
+        <p>ES - EN</p>
+      </div>
+    </div>
+
+    <p id="quote-1" class="mt-20 font-light">
+      <span class="text-accent">I make solutions,</span> not just software.
+      <p>Optimal, usable and creative solutions.</p>
+    </p>
+  </article>
