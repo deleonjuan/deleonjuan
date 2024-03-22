@@ -1,0 +1,19 @@
+---
+const { name } = Astro.props;
+---
+
+<li class="tech-tag">
+  <span class="font-ppNeueMontreal text-xs">{name}</span>
+</li>
+
+<style>
+  .tech-tag {
+    background: black;
+    border-radius: 100px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    padding: 0.2rem 1rem;
+    border: solid 1px #555;
+  }
+</style>

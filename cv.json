@@ -15,7 +15,7 @@
             "address": "",
             "postalCode": "",
             "city": "Quetzaltenango",
-            "countryCode": "ES",
+            "countryCode": "GT",
             "region": "Guatemala"
         },
         "profiles": [
@@ -107,20 +107,30 @@
             "url": "https://www.telusinternational.com/",
             "startDate": "",
             "endDate": "NOW",
-            "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada.",
-            "highlights": [
-                "Started the company"
+            "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada and Center America.",
+            "technollogies": [
+                "HTML & CSS",
+                "JavaScript",
+                "TypeScript",
+                "React js",
+                "Node js",
+                "Express & Fastify"
             ]
         },
         {
             "name": "CIAN CODERS GT",
             "position": "JR. FULL-STACK",
-            "url": "https://ciancoders.com/es/",
+            "url": "https://ciancoders.com/",
             "startDate": "",
             "endDate": "2021",
-            "summary": "Helped to develop different web systems and mobile applications for different clients around my country",
-            "highlights": [
-                "Started the company"
+            "summary": "Helped to develop different web systems and mobile applications for different clients around Guatemala.",
+            "technollogies": [
+                "HTML & CSS",
+                "JavaScript",
+                "TypeScript",
+                "React js",
+                "React Native",
+                "Django"
             ]
         }
     ],

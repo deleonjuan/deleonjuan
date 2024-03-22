@@ -1,7 +1,6 @@
 ---
-import LinkIcon from "../icons/link.astro";
-import Github from "../icons/github.astro";
 import Iconify from "./Iconify.astro";
+import TechTag from "./TechTag.astro";
 
 interface Props {
   name: string;
@@ -12,6 +11,7 @@ interface Props {
 
 const { name, description, technologies, links } = Astro.props;
 ---
+
 <!-- <LinkIcon size={16} />
                 <span class="ml-2 text-sm">{name}</span> -->
 <div id="project" class="flex dir-col items-center py-7 mr-10">
@@ -33,7 +33,7 @@ const { name, description, technologies, links } = Astro.props;
                 href={link}
                 target="_blank"
               >
-                <Iconify label={name} iconSize={20}/>
+                <Iconify label={name} iconSize={20} />
               </a>
             </label>
           ))
@@ -42,13 +42,7 @@ const { name, description, technologies, links } = Astro.props;
     </div>
     <!-- TAGS -->
     <ul>
-      {
-        technologies.map((tech) => (
-          <li>
-            <span class="font-ppNeueMontreal text-sm">{tech}</span>
-          </li>
-        ))
-      }
+      {technologies.map((tech) => <TechTag name={tech} />)}
     </ul>
   </div>
 </div>
@@ -60,21 +54,8 @@ const { name, description, technologies, links } = Astro.props;
     flex-wrap: wrap;
   }
 
-  #project li {
-    background: black;
-    border-radius: 100px;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: lighter;
-    padding: 0.2rem 1rem;
-    margin: 0.5rem 0;
-    border: solid 1px #555;
-    font-size: 0.9rem;
-  }
-
   #project-links {
     font-weight: normal;
     font-size: small;
   }
-  
 </style>
