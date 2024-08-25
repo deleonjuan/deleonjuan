@@ -103,34 +103,38 @@
     "work": [
         {
             "name": "Telus International",
-            "position": "MID. FULL-STACK",
+            "position": "Mid Full-stack developer",
             "url": "https://www.telusinternational.com/",
             "startDate": "",
             "endDate": "NOW",
             "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada and Center America.",
             "technollogies": [
-                "HTML & CSS",
-                "JavaScript",
-                "TypeScript",
                 "React js",
                 "Node js",
-                "Express & Fastify"
+                "Express & Fastify",
+                "React Native",
+                "AWS",
+                "Circle CI",
+                "Cypress / Jest",
+                "HTML & CSS",
+                "JavaScript",
+                "TypeScript"
             ]
         },
         {
-            "name": "CIAN CODERS GT",
-            "position": "JR. FULL-STACK",
+            "name": "Cian Coders GT",
+            "position": "Jr Full-stack developer",
             "url": "https://ciancoders.com/",
             "startDate": "",
             "endDate": "2021",
             "summary": "Helped to develop different web systems and mobile applications for different clients around Guatemala.",
             "technollogies": [
-                "HTML & CSS",
-                "JavaScript",
-                "TypeScript",
                 "React js",
                 "React Native",
-                "Django"
+                "Django",
+                "JavaScript",
+                "TypeScript",
+                "HTML & CSS"
             ]
         }
     ],

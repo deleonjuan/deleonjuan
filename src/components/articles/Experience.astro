@@ -1,25 +1,30 @@
 ---
 import PlaceIveWorked from "../placeIveWorked.astro";
+import SectionTitle from "../SectionTitle.astro";
 
 import { work } from "@cv";
 ---
 
-<article id="experience" class="min-h-screen flex flex-col justify-center">
-  <div class="mb-24">
-    <p>Where</p>
-    <p class="text-5xl font-bold">I've worked</p>
-  </div>
+<article
+  id="experience"
+  class="min-h-screen flex justify-center items-center bg-[#F5F5F7] py-20"
+>
+  <div class="max-w-7xl">
+    <SectionTitle smallTitle="Where" bigTitle="I've worked" />
 
-  {
-    work.map((job) => (
-      <PlaceIveWorked
-        date={job.endDate}
-        placeName={job.name}
-        position={job.position}
-        url={job.url}
-        summary={job.summary}
-        technollogies={job.technollogies}
-      />
-    ))
-  }
+    <div class="grid grid-cols-2 gap-6">
+      {
+        work.map((job) => (
+          <PlaceIveWorked
+            date={job.endDate}
+            placeName={job.name}
+            position={job.position}
+            url={job.url}
+            summary={job.summary}
+            technollogies={job.technollogies}
+          />
+        ))
+      }
+    </div>
+  </div>
 </article>

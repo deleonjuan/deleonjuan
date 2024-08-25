@@ -19,7 +19,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div id="page-container" class="flex flex-1 justify-center overflow-auto">
+    <div id="page-container" class="">
       <main>
         <Header />
         <section>
@@ -30,7 +30,7 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  @font-face {
+  /* @font-face {
     font-family: "Montserrat-VariableFont_wght";
     src: url("/fonts/Montserrat-VariableFont_wght.ttf");
   }
@@ -57,7 +57,7 @@ const { title } = Astro.props;
     src: url("/fonts/PPNeueMontreal-Medium.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
-  }
+  } */
   * {
     padding: 0;
     margin: 0;
@@ -72,7 +72,7 @@ const { title } = Astro.props;
   *::-webkit-scrollbar {
     display: none;
   }
-  html,
+  /* html,
   body {
     height: 100%;
   }
@@ -129,5 +129,5 @@ const { title } = Astro.props;
     section {
       align-items: center;
     }
-  }
+  } */
 </style>

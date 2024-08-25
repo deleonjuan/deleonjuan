@@ -4,8 +4,8 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			'montserrat': ['Montserrat-VariableFont_wght'],
-			'ppNeueMontreal': ['PPNeueMontreal-Medium', 'sans-serif']
+			// 'montserrat': ['Montserrat-VariableFont_wght'],
+			// 'ppNeueMontreal': ['PPNeueMontreal-Medium', 'sans-serif']
 		}
 	},
 	plugins: [],

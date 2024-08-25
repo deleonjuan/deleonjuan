@@ -1,0 +1,13 @@
+---
+interface Props {
+  smallTitle: string;
+  bigTitle: string;
+}
+
+const { smallTitle, bigTitle } = Astro.props;
+---
+
+<div id={`${smallTitle}-${bigTitle}-title`} class="mb-24">
+  <p>{smallTitle}</p>
+  <p class="text-5xl font-bold">{bigTitle}</p>
+</div>

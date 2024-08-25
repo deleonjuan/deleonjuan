@@ -1,6 +1,6 @@
 ---
 import ExternalLink from "../icons/external-link.astro";
-import TechTag from './TechTag.astro';
+import TechTag from "./TechTag.astro";
 
 interface Props {
   date: string;
@@ -14,24 +14,18 @@ interface Props {
 const { date, placeName, position, url, summary, technollogies } = Astro.props;
 ---
 
-<a
-  class="cursor-pointer externalLink mb-2"
-  href={url}
-  target="_blank"
->
-  <div class="flex dir-col items-center py-7">
-    <div class="mr-10">
-      <p class="text-2xl text-accent">{date}</p>
-    </div>
-    <div>
-      <label class="font-montserrat text-lg font-semibold inline-flex gap-1 mb-1">
-        {`${position} · ${placeName.toUpperCase()}`}
-        <ExternalLink />
-      </label>
-      <p class="text-base font-montserrat font-light mb-2">{summary}</p>
-      <ul class="inline-flex gap-2 flex-wrap">
-        {technollogies.map(e => <TechTag name={e}/>)}
-      </ul>
-    </div>
+<div class="bg-white flex flex-col rounded-3xl py-16 px-8">
+  <a
+    class="cursor-pointer text-md leading-3 flex items-center gap-1"
+    href={url}
+    target="_blank"
+  >
+    {placeName}
+    <ExternalLink size="18" />
+  </a>
+  <p class="font-bold text-lg mb-2">{position}</p>
+  <p class="text-wrap leading-snug text-gray-700">{summary}</p>
+  <div class="flex flex-row mt-4 gap-1 flex-wrap">
+    {technollogies.map((e) => <TechTag name={e} />)}
   </div>
-</a>
+</div>
