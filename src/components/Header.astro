@@ -1,24 +1,28 @@
 <header>
-  <a href="/" class="text-accent">JUAN DL</a>
+  <div class="max-w-7xl w-full">
+    <a href="/" class="text-white font-bold">JUAN DL</a>
+  </div>
 </header>
 
 <style>
   header {
     position: fixed;
     top: 0;
-    width: 100%;
-    max-width: var(--maxWidth);
-    margin: auto;
-
-    font-family: PPMonumentExtended;
-    font-weight: bold;
-    padding: 1.5rem 0rem;
-    z-index: 2;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0.8rem 0rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+    z-index: 10;
   }
 
   @media not all and (min-width: 768px) {
     header {
-        padding: 1.5rem 1rem;
+      padding: 0.8rem 1rem;
     }
   }
 </style>

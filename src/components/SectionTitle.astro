@@ -2,21 +2,34 @@
 interface Props {
   smallTitle: string;
   bigTitle: string;
-  rContent?: any;
+  className?: string;
 }
 
-const { smallTitle, bigTitle } = Astro.props;
+const { smallTitle, bigTitle, className } = Astro.props;
 ---
 
 <div
   id={`${smallTitle}-${bigTitle}-title`}
-  class="mb-24 flex flex-row justify-between items-end"
+  class="mb-20 flex flex-row justify-between items-end leading-3"
 >
   <div>
-    <p>{smallTitle}</p>
-    <p class="text-5xl font-bold">{bigTitle}</p>
+    <p class={`font-bold ${className}`}>{smallTitle}</p>
+    <p class={`text-6xl font-bold ${className}`}>{bigTitle}</p>
   </div>
   <div>
     <slot />
   </div>
 </div>
+
+<style>
+  .gradient1 {
+    background-image: linear-gradient(51deg, #004c94 45%, #297bc4 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
+  .gradient2 {
+    background-image: linear-gradient(200deg, #ffb310 45%, #ee1b67 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
+</style>
