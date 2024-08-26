@@ -2,12 +2,21 @@
 interface Props {
   smallTitle: string;
   bigTitle: string;
+  rContent?: any;
 }
 
 const { smallTitle, bigTitle } = Astro.props;
 ---
 
-<div id={`${smallTitle}-${bigTitle}-title`} class="mb-24">
-  <p>{smallTitle}</p>
-  <p class="text-5xl font-bold">{bigTitle}</p>
+<div
+  id={`${smallTitle}-${bigTitle}-title`}
+  class="mb-24 flex flex-row justify-between items-end"
+>
+  <div>
+    <p>{smallTitle}</p>
+    <p class="text-5xl font-bold">{bigTitle}</p>
+  </div>
+  <div>
+    <slot />
+  </div>
 </div>

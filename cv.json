@@ -1,168 +1,165 @@
 {
-    "basics": {
-        "name": "Juan Alberto De León",
-        "shortName": "Juan De León",
-        "label": "+5 years of experience as Full Stack developer",
-        "image": "/me.webp",
-        "email": "juan.deleon.dev@gmail.com",
-        "url": "",
-        "summary": [
-            "I’m a full-stack developer,",
-            "appacionated for code, always giving my best and trying to build nice experiences.",
-            "I have been professionally in the industry since 2021 when I got graduated from college, but have worked on small projects a lot before that."
-        ],
-        "location": {
-            "address": "",
-            "postalCode": "",
-            "city": "Quetzaltenango",
-            "countryCode": "GT",
-            "region": "Guatemala"
-        },
-        "profiles": [
-            {
-                "network": "LinkedIn",
-                "username": "juan-dl",
-                "url": "https://www.linkedin.com/in/juan-dl/"
-            },
-            {
-                "network": "GitHub",
-                "username": "deleonjuan",
-                "url": "https://github.com/deleonjuan/"
-            }
-        ]
+  "basics": {
+    "name": "Juan Alberto De León",
+    "shortName": "Juan De León",
+    "label": "+5 years of experience as Full Stack developer",
+    "image": "/me.webp",
+    "email": "juan.deleon.dev@gmail.com",
+    "url": "",
+    "summary": [
+      "I’m a full-stack developer,",
+      "appacionated for code, always giving my best and trying to build nice experiences.",
+      "I have been professionally in the industry since 2021 when I got graduated from college, but have worked on small projects a lot before that."
+    ],
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Quetzaltenango",
+      "countryCode": "GT",
+      "region": "Guatemala"
     },
-    "skills": [
-        {
-            "name": "HTML/CSS/JavaScript",
-            "level": "Master",
-            "keywords": [
-                "Desarrollo Web",
-                "Frontend",
-                "web development",
-                "web pages"
-            ]
-        },
-        {
-            "name": "TypeScript",
-            "level": "Advanced",
-            "keywords": [
-                "Desarrollo Web",
-                "Web Development",
-                "Frontend",
-                "Backend",
-                "JavaScript Superset"
-            ]
-        },
-        {
-            "name": "Node",
-            "level": "Advanced",
-            "keywords": [
-                "Desarrollo Web",
-                "Backend",
-                "JavaScript",
-                "Servidor",
-                "Web Development",
-                "Servers"
-            ]
-        },
-        {
-            "name": "React",
-            "level": "Advanced",
-            "keywords": [
-                "Desarrollo Web",
-                "Frontend",
-                "JavaScript Library",
-                "UI"
-            ]
-        },
-        {
-            "name": "React Native",
-            "level": "Advanced",
-            "keywords": [
-                "Desarrollo Web",
-                "Frontend",
-                "JavaScript Library",
-                "UI"
-            ]
-        },
-        {
-            "name": "Git / GitHub",
-            "level": "Advanced",
-            "keywords": [
-                "Control de Versiones",
-                "Colaboración",
-                "Código Fuente"
-            ]
-        },
-        {
-            "name": "MERN",
-            "level": "Medium",
-            "keywords": []
-        }
-    ],
-    "work": [
-        {
-            "name": "Telus International",
-            "position": "Mid Full-stack developer",
-            "url": "https://www.telusinternational.com/",
-            "startDate": "",
-            "endDate": "NOW",
-            "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada and Center America.",
-            "technollogies": [
-                "React js",
-                "Node js",
-                "Express & Fastify",
-                "React Native",
-                "AWS",
-                "Circle CI",
-                "Cypress / Jest",
-                "HTML & CSS",
-                "JavaScript",
-                "TypeScript"
-            ]
-        },
-        {
-            "name": "Cian Coders GT",
-            "position": "Jr Full-stack developer",
-            "url": "https://ciancoders.com/",
-            "startDate": "",
-            "endDate": "2021",
-            "summary": "Helped to develop different web systems and mobile applications for different clients around Guatemala.",
-            "technollogies": [
-                "React js",
-                "React Native",
-                "Django",
-                "JavaScript",
-                "TypeScript",
-                "HTML & CSS"
-            ]
-        }
-    ],
-    "certificates": [
-        {
-            "name": "Certified React Developer",
-            "date": "August 28, 2023",
-            "issuer": "W3Schools",
-            "url": "https://verify.w3schools.com/1O0RHZIJJP"
-        }
-    ],
-    "projects": [
-        {
-            "name": "Slapper - Mobile app",
-            "description": "recreation of the 10's TV show 'victorious' social media app *theSlap* that allows you to share your thoughts and mood as in the show.",
-            "technologies": [
-                "React-Native"
-            ],
-            "links": [
-                {
-                    "name": "code",
-                    "link:": "https://github.com/deleonjuan/slappr"
-                },
-                {
-                    "name": "preview",
-                    "link:": "https://play.google.com/apps/testing/com.slappr"
-                }
-            ]
-        }
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "juan-dl",
+        "url": "https://www.linkedin.com/in/juan-dl/"
+      },
+      {
+        "network": "GitHub",
+        "username": "deleonjuan",
+        "url": "https://github.com/deleonjuan/"
+      }
     ]
+  },
+  "skills": [
+    {
+      "name": "HTML/CSS/JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "web development", "web pages"]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Advanced",
+      "keywords": [
+        "Desarrollo Web",
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Advanced",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "JavaScript",
+        "Servidor",
+        "Web Development",
+        "Servers"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Advanced",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "React Native",
+      "level": "Advanced",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Git / GitHub",
+      "level": "Advanced",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "MERN",
+      "level": "Medium",
+      "keywords": []
+    }
+  ],
+  "work": [
+    {
+      "name": "Telus International",
+      "position": "Mid Full-stack developer",
+      "url": "https://www.telusinternational.com/",
+      "startDate": "",
+      "endDate": "NOW",
+      "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada and Center America.",
+      "technollogies": [
+        "React js",
+        "Node js",
+        "Express & Fastify",
+        "React Native",
+        "AWS",
+        "Circle CI",
+        "Cypress / Jest",
+        "HTML & CSS",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Cian Coders GT",
+      "position": "Jr Full-stack developer",
+      "url": "https://ciancoders.com/",
+      "startDate": "",
+      "endDate": "2021",
+      "summary": "Helped to develop different web systems and mobile applications for different clients around Guatemala.",
+      "technollogies": [
+        "React js",
+        "React Native",
+        "Django",
+        "JavaScript",
+        "TypeScript",
+        "HTML & CSS"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified React Developer",
+      "date": "August 28, 2023",
+      "issuer": "W3Schools",
+      "url": "https://verify.w3schools.com/1O0RHZIJJP"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Slapper",
+      "description": "Share thoughts and mood with friends.",
+      "technologies": ["React-Native"],
+      "links": [
+        {
+          "name": "code",
+          "url": "https://github.com/deleonjuan/slappr"
+        },
+        {
+          "name": "preview",
+          "url": "https://play.google.com/apps/testing/com.slappr"
+        }
+      ]
+    },
+    {
+      "name": "AIlingo",
+      "description": "Wait for it.",
+      "technologies": [],
+      "links": []
+    },
+    {
+      "name": "CRM",
+      "description": "Wait for it.",
+      "technologies": [],
+      "links": []
+    },
+    {
+      "name": "Finance App",
+      "description": "Wait for it.",
+      "technologies": [],
+      "links": []
+    }
+  ]
 }

@@ -1,22 +1,124 @@
 ---
 import { projects } from "@cv";
-import ProjectsIveDone from "../projectsIveDone.astro";
+import SectionTitle from "../SectionTitle.astro";
+import TechTag from "../TechTag.astro";
+import ExternalLink from "../ExternalLink.astro";
 ---
 
-<article id="projects" class="min-h-screen flex flex-col justify-center">
-  <div class="mb-24">
-    <p>Projects</p>
-    <p class="text-5xl font-bold">I've worked on</p>
+<article
+  id="projects"
+  class="min-h-screen flex flex-col justify-center items-center bg-white py-20 overflow-x-hidden"
+>
+  <div class="max-w-7xl w-full">
+    <SectionTitle smallTitle="Projects" bigTitle="I've worked on">
+      <div class="flex gap-4">
+        <button class="btn btn--previous">{"<"}</button>
+        <button class="btn btn--next">{">"}</button>
+      </div></SectionTitle
+    >
   </div>
-
-  {
-    projects.map((project) => (
-      <ProjectsIveDone
-        name={project.name}
-        description={project.description}
-        technologies={project.technologies}
-        links={project.links}
-      />
-    ))
-  }
+  <div class="slider">
+    <ul class="slider__wrapper">
+      {
+        projects.map(({ description, technologies, links, name }) => (
+          <li class="slide flex flex-col justify-between bg-black rounded-3xl p-6 w-full h-full cursor-pointer">
+            <div>
+              <p class="text-white">{name}</p>
+              <p class="text-white font-bold text-2xl">{description}</p>
+              <ul class="flex flex-row mt-2 gap-1 flex-wrap">
+                {technologies.map((tech) => (
+                  <TechTag name={tech} />
+                ))}
+              </ul>
+            </div>
+            <div>
+              {links.map(({ name, url }) => (
+                <ExternalLink link={url} title={name} className="text-white" />
+              ))}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </article>
+
+<style>
+  .slider {
+    --slide-size: 70vmin;
+    --slide-margin: 1vmin;
+    height: var(--slide-size);
+    margin: 0 auto;
+    position: relative;
+    width: var(--slide-size);
+  }
+
+  .slider__wrapper {
+    display: flex;
+    position: absolute;
+    transition: transform 600ms cubic-bezier(0.25, 1, 0.35, 1);
+  }
+
+  .slide {
+    height: var(--slide-size);
+    margin: 0 var(--slide-margin);
+    width: calc(var(--slide-size) * 0.75);
+  }
+
+  .btn {
+    background-color: #ddd;
+    border-radius: 5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn:hover {
+    background-color: #e6e6e6;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    const previousButton = document.querySelector(".btn--previous");
+    const nextButton = document.querySelector(".btn--next");
+    let currentSlide = 0;
+
+    function updateSlidePosition() {
+      const sliderWrapper = document.querySelector(
+        ".slider__wrapper"
+      ) as HTMLElement | null;
+
+      if (sliderWrapper) {
+        sliderWrapper.style.transform = `translateX(-${currentSlide * (100 / slides.length)}%)`;
+      } else {
+        console.error("Element .slider__wrapper not found.");
+      }
+    }
+
+    function goToPreviousSlide() {
+      currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+      updateSlidePosition();
+    }
+
+    function goToNextSlide() {
+      currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+      updateSlidePosition();
+    }
+
+    slides.forEach((slide, index) => {
+      slide.addEventListener("click", () => {
+        if (currentSlide !== index) {
+          currentSlide = index;
+          updateSlidePosition();
+        }
+      });
+    });
+
+    previousButton.addEventListener("click", goToPreviousSlide);
+    nextButton.addEventListener("click", goToNextSlide);
+  });
+</script>
