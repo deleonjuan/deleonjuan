@@ -1,8 +1,46 @@
+---
+import { basics } from "@cv";
+import GitHubIcon from "@/icons/github.astro";
+import LinkedInIcon from "@/icons/linkedin.astro";
+import MailIcon from "@/icons/mail.astro";
+---
+
 <header>
-  <div class="max-w-7xl w-full">
+  <div class="max-w-7xl w-full flex flex-row justify-between">
     <a href="/" class="text-white font-bold">JUAN DL</a>
+    <div class="flex flex-row gap-5">
+      <a
+        href={basics.profiles[0].url}
+        target="_blank"
+        class="text-white font-bold"
+      >
+        <GitHubIcon />
+      </a>
+      <a
+        href={basics.profiles[1].url}
+        target="_blank"
+        class="text-white font-bold"
+      >
+        <LinkedInIcon />
+      </a>
+      <span id="emailLink" class="text-white font-bold cursor-pointer">
+        <MailIcon />
+      </span>
+    </div>
   </div>
 </header>
+
+<script>
+  import { basics } from "@cv";
+  /**
+   * copy the email to the clipboard
+   */
+  const copyText = document.getElementById("emailLink");
+  copyText.addEventListener("click", (e) => {
+    navigator.clipboard.writeText(basics.email);
+    alert(`email ${basics.email} copied to clipboard`);
+  });
+</script>
 
 <style>
   header {

@@ -11,7 +11,7 @@ const { label, icon = "externalLink", iconSize = 24 } = Astro.props;
 ---
 
 <>
-  <span class="mr-1">{label}</span>
+  <span class="mr-1 text-white">{label}</span>
   {icon === "externalLink" && <ExternalLink size={iconSize}/>}
-  {icon === "copy" && <CopyIcon size={iconSize}/>}
+  {icon === "copy" && <CopyIcon size={iconSize} class="text-white"/>}
 </>
