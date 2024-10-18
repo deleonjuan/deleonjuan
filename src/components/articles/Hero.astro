@@ -8,7 +8,9 @@ import { basics } from "@cv";
   <div
     class="shrinkable-div bg-black flex flex-col justify-center items-center"
   >
-    <h1 class="text-6xl font-bold mb-5 text-white">{basics.shortName}</h1>
+    <h1 class="text-8xl font-bold mb-5 text-white font-soria">
+      {basics.shortName.toUpperCase()}
+    </h1>
 
     <div id="container-01" class="relative">
       <div
@@ -26,16 +28,20 @@ import { basics } from "@cv";
         id="description-container"
         class="inline-block p-[0.8rem] bg-black text-white absolute bottom-[-2rem] left-[10rem] w-full"
       >
-        <p>FULLSTACK DEV</p>
+        <p>MID FULLSTACK DEV</p>
         <p>+5 YEARS OF EXPERIENCE</p>
         <p>ES - EN</p>
       </div>
     </div>
 
-    <p id="quote-1" class="mt-20 font-light text-white">
-      <span class="text-white">I make solutions,</span> not just software.
-      <p class="text-white">Optimal, usable and creative solutions.</p>
-    </p>
+    <!-- <p id="quote-1" class="mt-20 font-light text-white">
+      I make solutions, not just software.
+      <h1 class="text-white">Optimal, usable and creative solutions.</h1>
+    </p> -->
+    <h4 id="quote-1" class="mt-20 text-lg font-light text-red-100">
+      I make solutions, not just software.
+    </h4>
+    <h1 class="text-red-100 text-xl">Optimal, usable and creative solutions.</h1>
   </div>
 </article>
 
@@ -48,6 +54,12 @@ import { basics } from "@cv";
     margin: 0 auto;
     animation: shrink 1s linear 1 forwards;
     animation-timeline: scroll();
+
+    background-image: url("../../images/wallpaper.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0000000;
   }
 
   .content {

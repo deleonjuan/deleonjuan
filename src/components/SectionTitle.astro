@@ -10,11 +10,11 @@ const { smallTitle, bigTitle, className } = Astro.props;
 
 <div
   id={`${smallTitle}-${bigTitle}-title`}
-  class="mb-20 flex flex-row justify-between items-end leading-3"
+  class="mb-16 flex flex-row justify-between items-end leading-5"
 >
   <div>
     <p class={`font-bold ${className}`}>{smallTitle}</p>
-    <p class={`text-6xl font-bold ${className}`}>{bigTitle}</p>
+    <p class={`text-7xl font-bold ${className} font-soria h-20 content-center`}>{bigTitle}</p>
   </div>
   <div>
     <slot />
@@ -29,6 +29,11 @@ const { smallTitle, bigTitle, className } = Astro.props;
   }
   .gradient2 {
     background-image: linear-gradient(200deg, #ffb310 45%, #ee1b67 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
+  .gradient3 {
+    background-image: linear-gradient(200deg, #56cfb1 45%, #3a8ece 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
   }

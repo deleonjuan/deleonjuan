@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
+			'soria': ['soria-font'],
 			// 'montserrat': ['Montserrat-VariableFont_wght'],
 			// 'ppNeueMontreal': ['PPNeueMontreal-Medium', 'sans-serif']
 		}

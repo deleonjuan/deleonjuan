@@ -7,23 +7,30 @@ import MailIcon from "@/icons/mail.astro";
 
 <header>
   <div class="max-w-7xl w-full flex flex-row justify-between">
-    <a href="/" class="text-white font-bold">JUAN DL</a>
-    <div class="flex flex-row gap-5">
+    <a href="/" class="text-red-100 font-bold font-soria text-xl">J U A N . D L</a
+    >
+    <div class="flex flex-row gap-8">
       <a
         href={basics.profiles[0].url}
         target="_blank"
         class="text-white font-bold"
+        title={basics.profiles[0].network}
       >
-        <GitHubIcon />
+        <LinkedInIcon />
       </a>
       <a
         href={basics.profiles[1].url}
         target="_blank"
         class="text-white font-bold"
+        title={basics.profiles[0].network}
       >
-        <LinkedInIcon />
+        <GitHubIcon />
       </a>
-      <span id="emailLink" class="text-white font-bold cursor-pointer">
+      <span
+        id="emailLink"
+        class="text-white font-bold cursor-pointer"
+        title={"Email"}
+      >
         <MailIcon />
       </span>
     </div>
