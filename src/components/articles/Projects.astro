@@ -3,6 +3,7 @@ import { projects } from "@cv";
 import SectionTitle from "../SectionTitle.astro";
 import TechTag from "../TechTag.astro";
 import ExternalLink from "../ExternalLink.astro";
+import Chevron from "@/icons/chevron.astro";
 ---
 
 <article
@@ -12,8 +13,8 @@ import ExternalLink from "../ExternalLink.astro";
   <div class="w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 2xl:px-16">
     <SectionTitle smallTitle="Projects" bigTitle="I've created" className="gradient1">
       <div class="flex gap-4">
-        <button class="btn btn--previous">{"<"}</button>
-        <button class="btn btn--next">{">"}</button>
+        <button class="btn btn--previous"><Chevron/></button>
+        <button class="btn btn--next"><Chevron className="rotate-180"/></button>
       </div></SectionTitle
     >
   </div>

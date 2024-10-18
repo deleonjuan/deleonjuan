@@ -9,7 +9,8 @@
     "summary": [
       "I’m a full-stack developer,",
       "appacionated for code, always giving my best and trying to build nice experiences.",
-      "I have been professionally in the industry since 2021 when I got graduated from college, but have worked on small projects a lot before that."
+      "I have been professionally in the industry since 2021 when I got graduated from college, but have worked on small projects a lot before that.",
+      "With experience working on projects related to telecomunication, health and NGOs."
     ],
     "location": {
       "address": "",
@@ -88,7 +89,7 @@
       "url": "https://www.telusdigital.com/",
       "startDate": "",
       "endDate": "NOW",
-      "summary": "Working with a multicultural team to create different applications for TELUS enterprise service in Canada and Center America.",
+      "summary": "Working with a multicultural team to create teleco and health applications for TELUS enterprise service in Canada and Center America.",
       "technollogies": [
         "React js",
         "Node js",
@@ -97,6 +98,7 @@
         "AWS",
         "Circle CI",
         "Cypress / Jest",
+        "Docker / Cubernetes",
         "HTML & CSS",
         "JavaScript",
         "TypeScript"
@@ -108,7 +110,7 @@
       "url": "https://ciancoders.com/",
       "startDate": "",
       "endDate": "2021",
-      "summary": "Helped to develop different web systems and mobile applications for different clients around Guatemala.",
+      "summary": "Helped to develop different web systems and mobile applications for different clients around Guatemala including NGOs and Pymes.",
       "technollogies": [
         "React js",
         "React Native",

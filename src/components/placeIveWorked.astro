@@ -17,9 +17,9 @@ const { date, placeName, position, url, summary, technollogies } = Astro.props;
 
 <div class="bg-white flex flex-col rounded-3xl py-16 px-8">
   <ExternalLink link={url} title={placeName} />
-  <p class="font-bold text-lg mb-2">{position}</p>
+  <p class="font-bold text-lg mb-4">{position}</p>
   <p class="text-wrap leading-snug text-gray-700">{summary}</p>
-  <ul class="flex flex-row mt-4 gap-1 flex-wrap">
+  <ul class="flex flex-row mt-6 gap-1 flex-wrap">
     {technollogies.map((e) => <TechTag name={e} />)}
   </ul>
 </div>

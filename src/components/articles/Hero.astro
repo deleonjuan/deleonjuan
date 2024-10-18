@@ -41,7 +41,9 @@ import { basics } from "@cv";
     <h4 id="quote-1" class="mt-20 text-lg font-light text-red-100">
       I make solutions, not just software.
     </h4>
-    <h1 class="text-red-100 text-xl">Optimal, usable and creative solutions.</h1>
+    <h1 class="text-red-100 text-xl">
+      Optimal, usable and creative solutions.
+    </h1>
   </div>
 </article>
 
@@ -56,10 +58,11 @@ import { basics } from "@cv";
     animation-timeline: scroll();
 
     background-image: url("../../images/wallpaper.webp");
-    background-position: center;
+    background-position: center 0%;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #0000000;
+    background-attachment: fixed;
   }
 
   .content {
@@ -71,6 +74,7 @@ import { basics } from "@cv";
     0% {
       width: 100%;
       border-radius: 0rem;
+      background-position: center 0%;
     }
     15% {
       width: 90%;
@@ -79,6 +83,7 @@ import { basics } from "@cv";
     100% {
       width: 90%;
       border-radius: 4rem;
+      background-position: center 200%;
     }
   }
 </style>
